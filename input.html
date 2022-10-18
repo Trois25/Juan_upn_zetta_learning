@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Item</title>
+
+    <style>
+        body {
+            background-color: rgb(216, 234, 135);
+        }
+        .grid {
+            display: inline-grid;
+            grid-template-columns: auto auto auto;
+            padding: 10px;
+        }
+
+        .grid-item {
+            padding: 20px;
+        }
+    </style>
+
+  </head>
+  <body>
+    <section>
+      <h2>Item Input</h2>
+      <form action=".B">
+        <label for="profile">Item Image</label><br />
+        <input type="file" id="profile" name="profile" />
+        <br /><br />
+        <label for="fname">Item Name</label> <br />
+        <input type="text" id="fname" />
+        <br /><br />
+        <label for="type">Item Category</label> <br />
+        <input type="radio" id="poster" name="type" />
+        <label for="poster">Poster</label>
+        <input type="radio" id="figure" name="type" />
+        <label for="figure">Figure</label>
+        <input type="radio" id="keychain" name="type" />
+        <label for="keychain">Keychain </label>
+        <br /><br />
+        <label for="distributed">Item distributed</label> <br />
+        <input type="date" id="distributed" />
+        <br /><br />
+        <label for="price">Price</label> <br />
+        <input type="text" id="price" />
+        <br /><br />
+        <label for="production">Made in</label><br />
+        <input type="text" id="production" />
+        <br /><br />
+        <label for="item_link">Item link</label><br />
+        <input type="url" id="item_link" name="Social_Media" />
+        <br /><br />
+        <label for="description">Description</label> <br />
+        <textarea
+          id="description"
+          style="width: 200px; height: 150px"
+        ></textarea>
+        <br /><br />
+        <input type="submit" value="Submit" />
+      </form>
+    </section>
+
+    <section>
+        <h2>Item Display</h2>
+        <h4>SubaKey</h4>
+        <div class="grid">
+            <img src="https://i.etsystatic.com/24580721/r/il/24112e/3067105799/il_340x270.3067105799_qmn2.jpg" alt="Keychain" style="width : 150px">
+            <div class="grid-item">
+                <ul>
+                    <li>Keychain</li>
+                    <li>18-10-2022</li>
+                    <li>$5,00</li>
+                    <li>Made in Japan</li>
+                    <li><a href="https://i.etsystatic.com/24580721/r/il/24112e/3067105799/il_340x270.3067105799_qmn2.jpg">product link</a></li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <h4>Description</h4>
+            <p>Subaru keychain using akrilik with transparant background</p>
+            </div>
+        </div>
+    </section>
+  </body>
+</html>
