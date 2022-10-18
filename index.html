@@ -1,34 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        .profile {
+        .grid {
             display: inline-grid;
             grid-template-columns: auto auto auto;
             padding: 10px;
-          }
-          
-          .grid-item {
+        }
+
+        .grid-item {
             padding: 20px;
-          }
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        body {
+            background-color: rgb(216, 234, 135);
+        }
     </style>
 </head>
+
 <body>
 
     <h1> PROFILE </h1>
-    <div class="profile">
-        <img src="/foto/pic1.png" alt="Subaru" style="width: 200px "class="grid-item">
-        <h4 class="grid-item">Name : Ozora Subaru <br> Hololive 2nd Generation <br> <a href="https://virtualyoutuber.fandom.com/wiki/Oozora_Subaru">More Information</a></h4>
+    <div class="grid">
+        <img src="/foto/pic1.png" alt="Subaru" style="width: 200px " class="grid-item">
+        <h4 class="grid-item">Name : Ozora Subaru <br> Nickname : Duck <br> Hololive 2nd Generation <br> <a
+                href="https://virtualyoutuber.fandom.com/wiki/Oozora_Subaru">More Information</a></h4>
     </div>
-    <p>subaru is a <span style="color:blue;font-weight:bold"> duck </span>from hololive 2nd generation, that start streaming from 2018</p>
-    
+    <br>
+    <p>subaru is a <span style="color:blue;font-weight:bold"> duck </span>from hololive 2nd generation, that start
+        streaming from 2018</p>
+    <p>she already have some merchandise that you can buy from her live</p>
+    <br>
+    <h3>Merchandise</h3>
+
+    <!-- day 3 -->
+    <div class="shopping">
+        <ol>
+            <li>Poster</li>
+            <li>Figure</li>
+            <li>Key Chain</li>
+        </ol>
+
+        <h3>Description</h3>
+        <table style="width:100%">
+            <tr>
+                <th>Item Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Picture</th>
+
+            </tr>
+            <tr>
+                <td>Poster</td>
+                <td>Poster with picture of subaru and her beloved duck, ultra HD, A4 size. <br> <br>
+                    Size Variety :
+                    <ol>
+                        <li> A3 </li>
+                        <li> A4 </li>
+                        <li> A5 </li>
+                    </ol>
+                </td>
+                <td>$10,00</td>
+                <td>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLbal4B9kuwo-otknHY6ak1OzEWhFUa2vxtg&usqp=CAU"
+                        alt="Poster" style="width : 150px">
+                </td>
+            </tr>
+            <tr>
+                <td>Figure</td>
+                <td>Subaru figure made with pvc, size 14,3cm high</td>
+                <td>$25,00</td>
+                <td>
+                    <img src="https://64.media.tumblr.com/02f6c38d5c3474c60527bd7e8668d61e/c5b9c3c4f6252af7-2f/s540x810/bf9442970083b0337068614737584132914cadca.jpg"
+                        alt="Figure" style=" width : 150px">
+                </td>
+            </tr>
+            <tr>
+                <td>KeyChain</td>
+                <td>Subaru keychain using akrilik with transparant background</td>
+                <td>$5,00</td>
+                <td>
+                    <img src="https://i.etsystatic.com/24580721/r/il/24112e/3067105799/il_340x270.3067105799_qmn2.jpg"
+                        alt="Keychain" style="width : 150px">
+                </td>
+            </tr>
+        </table>
+        <div class="grid">
+            <div class="grid-item">
+                <h3> Sing list </h3>
+                <ul>
+                    <li>
+                        Subaru Duck Dance <br><br>
+                        <audio src="/music/y2mate.com - Subaru Duck Dance  Hey Ya Full.mp3" controls> Vibing song
+                        </audio>
+                    </li>
+                    <br>
+                    <li>
+                        Do my best Ozoora Subaru <br><br>
+                        <audio src="/music/y2mate.com - Do my best Oozora Subaru English Caption.mp3" controls></audio>
+                    </li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <h3>Video</h3>
+                <iframe width="500px" height="300px"
+                    src="https://www.youtube.com/embed/0OVjaFrZd5g?autoplay=1&mute=1"></iframe>
+                <!-- watch diganti embed-->
+            </div>
+        <div class="grid-item">
+            <h3>Member Form</h3>
+            <form action="">
+                <label for="fname">Fisrt Name</label> <br>
+                    <input type="text" id="fname"><br><br>
+                <label for="lname">Last Name</label> <br>
+                    <input type="text" id="lname"><br><br>
+                <label for="bio">Biography</label> <br>
+                    <textarea id="bio" style="width:200px;height:150px"></textarea>
+                <label for="gend">Gender</label> <br>
+                    <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female">
+                <label for="male">Female</label>
+                <br><br>
+                <label for="email">Email</label>
+                    <input type="email" id="email">
+                <br><br>
+                <label for="number">Telegram Number</label> 
+                    <input type="tel" id="number">
+                <br><br>
+                <label for="instagram">Instagram</label>
+                    <input type="url" id="instagram" name="Social_Media">
+            </form>
+        </div>
+    </div>
+    </div>
+
 </body>
+
 </html>
