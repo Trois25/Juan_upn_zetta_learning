@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+body{
+    background-image : url(https://external-preview.redd.it/CbVZXHttGEMmCsfGz3P4St-TepDiWtW1aN4o_DicQAk.png?format=pjpg&auto=webp&s=c78f8dff5581935bcbc1632c6c4734a6dfb395f1);
+    background-size:100%;
+}
+
+header{
+  margin-left: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+#transbox {
+    margin: auto auto;
+    background-color: #ffffff;
+    border: 1px solid rgb(233, 200, 200);
+    opacity: 0.85;
+    padding: 50px;
+}
+
+div.card img {
+    width: 200px;
+    height: auto;
+}
+
+#transbox p {
+    text-align: justify;
+    margin: 2%;
+    font-weight: bold;
+    color: #000000;
+}
+
+.card {
+    padding: 16px;
+    text-align: center;
+    background-color: #b89999;
+    margin: 0 auto;
+    border: 1px solid rgb(173, 140, 140);
+    width: 250px;
+    height: 550px;
+  }
+
+div.card h2{
+  margin-bottom:20px;
+  margin-top:20px;
+}
+
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+
+  .row {
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    margin: 0;
+    padding: 20px 0;
+  }
