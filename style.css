@@ -2,30 +2,73 @@
     margin: 0;
     padding: 0;
     justify-content: center;
-  }
-  header{
+}
+
+.container{
+    padding-top: 50px;
     text-align: center;
+}
+
+.display{
+    display: flex;
+}
+
+.container1{
+    width: 25%;
+    height: 200px;
+    overflow-y: auto;
+    background-color: darkgray;
+}
+
+.container2{
+    width: 25%;
+    height: 200px;
+    overflow-y: auto;
+    background-color: darkcyan;
+}
+
+header{
     background-color: rgb(245, 232, 183);
-  }
-  
-  .card{
-    margin: 10px 10px;
+    position:fixed;
+    width: 100%;
+    text-align: center;
+}
+
+footer{
+    background-color: rgb(245, 232, 183);
+    padding: 20px 20px 20px 20px;
+    
+}
+
+.card{
     padding: 30px 10px;
     width: 200px;
     background-color: rgb(237, 244, 223);
-  }
-  
-  .firstrow,.secondrow,.thirdrow{
+}
+
+.firstrow,.secondrow,.thirdrow{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-  }
-  
-  .card img{
+}
+
+.card img{
     width: 200px;
     height: 150px;
-  }
-  
-  .card h3,p,h4{
+}
+
+.card p::first-line {
+    color: rgb(132, 207, 200);
+}
+
+.card h3,p,h4{
     text-align: center;
-  }
+}
+
+.margin{
+    margin: 10px 10px 20px 20px;
+}
+
+.container li{
+    margin:20px 20px;
+}
