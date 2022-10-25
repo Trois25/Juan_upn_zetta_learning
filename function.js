@@ -1,8 +1,8 @@
 const cart = [
     {title:"bintang", price:85000, author:"TereLiye"},
     {title:"bulan", price:80000, author:"TereLiye"},
-    {title:"bumi", price:70000, author:"TereLiye"},
-    {title:"matahari", price:75000, author:"TereLiye"}
+    {title:"matahari", price:75000, author:"TereLiye"},
+    {title:"bumi", price:70000, author:"TereLiye"}
 ];
 
 function purchasing (book,discount,tax) {
@@ -16,12 +16,15 @@ function purchasing (book,discount,tax) {
             const amounttax = discountprice * (tax/100);
             let totalprice = discountprice + amounttax;            
             console.log("-----------------------------------------");
-            console.log("book " + many);
-            console.log("Book Title : " + book[i].title)
+            console.log("-- book " + many + " --");
+            console.log("");
+            console.log("Book Title : " + book[i].title);
+            console.log("Price : " + book[i].price);
             console.log("Amount of discount : " + amountdiscount);
             console.log("Price after discount : " + discountprice);
             console.log("Amount of tax : " + amounttax);
             console.log("Price after tax and discount : " + totalprice);
+            console.log("");
             result += totalprice;
         }else{
             console.log("This book stock is empty");
@@ -37,4 +40,32 @@ function purchasing (book,discount,tax) {
     return result;
 }
 
-purchasing(cart,10,10);
+function credit(total, duration, tax){
+    termpayment = [];
+    totalcredit = 0;
+    console.log("");
+    console.log("--- Credit Menu ---");
+    console.log("");
+
+    console.log("Total Price : " + total);
+    console.log("-----------------------------------------")
+    price = (total/duration);
+
+    const taxprice = price * (tax/100);
+    const creditprice = price + taxprice;
+
+    for(let index=0; index<duration; index++){
+        termpayment.push({
+            month: index+1,
+            payment: creditprice
+        });
+        console.log("Payment month " + (index + 1) + " " + creditprice);
+        totalcredit += creditprice;
+    }
+    console.log("----------------------------------------")
+    console.log("Price total for credit : " + totalcredit);
+    console.log("----------------------------------------")
+    return termpayment;
+}
+//purchasing(cart,30,10);
+credit(purchasing(cart,30,10),5,5)
