@@ -1,0 +1,54 @@
+1. Angular merupakan sebuah framework yang umumnya digunakan untuk membuat SPA (single page application) SPA disini maksudnya adalah pemrosesan dalam suatu website hanya terjadi di 1 laman tersebut, beberapa contoh implementasi SPA adalah facebook, google maps, google drive, twitter, dll. Angular merupakan framework berbasis 1 bahasa, yaitu typescript. Angular juga dapat dibuat web dinamis yang mana angular akan melakukan STTP request ke BE server. Code dari angular reusable karena angular berbasis komponen.
+
+Modul
+modul merupakan sebuah container yang menyimpan beberapa komponen yang akan digunakan lalu import di module.ts dan nantinya akan disusun menjadi satu applikasi yang disajikan didalam main.ts untuk melakukan bootstraping ke platform browser yang digunakan
+
+Struktur folder
+folder src sebagai sumber file untuk projek applikasi yang akan dibuat. didalamnya ada :
+-app => berisi template componen dan logika program serta data applikasi dan file untuk styling tiap applikasi
+
+- assets => berisi file static kaya gambar dll
+- environtment => opsi konfigurasi untuk pengembangan, defaultnya msai dalam mode development
+- favicon => sebgaia file icon applikasi
+- index.html => halaman utama dari applikasi dan untuk disini angular akan menambahkan css dan js yang ada didalam paket langsung kedalam file index ini yang diatur oleh angular.json
+- main.ts => file typescript yang merupakan pintu utama applikasi angular dengan tujuan menjalankan applikasi dengan melakukan bootstraping ke route modul dari sebuah applikasi sehingga dapat dijalankan disisi browser yang di import di module app
+- polyfills => menyediakan layanan untuk dukungan versi browser
+- style.css => style global yang disediakan angular
+- test.ts => inti utama testing dengan konfigurasi kusus dari angular dan biasanya dibiarkan seperti yang diberikan oleh angular di awal pembuatan projek
+
+folder app berisi logika template berupa komponen untuk menyimpan data applikasi yang dipisahkan:
+-html => dapat mendefinisikan template html
+- css => style tiap komponen
+- spec.ts => kebutuhan testing tiap komponen
+- app.moduls => route modul tiap komponen dan yang paket atau modul yang akan digunakan dapat di import di folder ini
+
+- .editorconfig => file untuk konfigurasi editor
+  -.gitignore => menentukan file mana yang akan diabaikan oleh git
+- README => pengantar atau penjelasan pada projek
+- angular.json => konfigurasi CLI yang defaultnya memiliki arsitektur projek dan opsi settingan dasar sebuah servis serta uji coba melalui tslint dan juga pengguna dapat menambahkan aset/css yang akan digunankan
+- package.json => file untuk mengatur dependencies dari paket npm yang telah diinstall untuk projek angular yang mana nantinya akan disimpan di folder note_modules
+- tsconfig => tempat konfigurasi dasar typescript
+  -tslint json => alat untuk analisi code dalam program typescript untuk memeriksa bagian error
+
+QUIZ
+1. dibagi menjadi beberapa komponen yaitu :
+    - Sidebar
+    - Header
+    - Card
+2. 1) sidebar akan berisi :
+        - menu logo
+        - menu title
+        - dipisahkan menggunakan container untuk menu yang bersangkutan
+    2) Header akan berisi :
+        - Youtube logo
+        - Search bar
+        - Beberapa icon (suara, tambah video, notofikas)
+        - Profile akun youtube
+    3) Card akan berisi :
+        - Gambar dari content
+        - Judul konten
+        - Logo dan nama akun youtube
+        - dipisahkan menggunakan flexbox/grid
+3. dia akan memiliki 3 modul tambahan yaitu sidebar, header, dan card.
+    component yang terdapat didalam modul dapat dilihat di nomor 2
+    yang mana telah memisahkan tiap component pada modul
