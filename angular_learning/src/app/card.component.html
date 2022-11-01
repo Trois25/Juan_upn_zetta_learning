@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    
+    <h1 style="text-align:center">{{Title}}</h1>
+    <div class="container">
+        <!--First card-->
+        <div class="row">
+            <div class="card margin">
+                <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//91/MTA-12637531/fantech_fantech_maxpower_mk853_mechanical_keyboard_gaming_space_edition_full01_bm9xgatr.jpg"
+                    alt="" />
+                <h3>MAXPOWER MK853</h3>
+                <p>Mechanical Keyboard <br> blue switch 70%</p>
+                <br />
+                <h4>Price : Rp.650,000,00</h4>
+                <p><button (click)="detile('keyboard')">show detile</button></p>
+                <p *ngIf="check">{{kdetile}}</p>
+            </div>
+            <div class="card margin">
+                <img src="https://gamepowerpc.com/storage/Zga3XdTGxop6sBQmjcUp15AGg6BVo9QBlxkgMNGD.jpeg" alt="" />
+                <h3>GPRBP27C144</h3>
+                <p>
+                    Gaming Monitor
+                    <br>
+                    With an astonishing overclockable 144Hz refresh rate, fast-moving.
+                </p>
+                <br />
+                <h4>Price : 1,450,000,00</h4>
+                <p><button (click)="detile('monitor')">show detile</button></p>
+                <p *ngIf="check">{{mdetile}}</p>
+            </div>
+            <div class="card margin">
+                <img src="https://cf.shopee.co.id/file/a5791011cb822d569204d64f83ecaec0" alt="Mouse" />
+                <h3>HIVE UX2</h3>
+                <p>Gaming mouse <br> sensor PIXART 3360 and Acceleration 75g</p>
+                <br />
+                <h4>Price : Rp.500,000</h4>
+                <p><button (click)="detile('mouse')">show detile</button></p>
+                <p *ngIf="check">{{msdetile}}</p>
+            </div>
+            <div class="card margin">
+                <img src="https://cf.shopee.co.id/file/69268098e8334d26610be1e343000019" alt="Mousepad" />
+                <h3> Mousepad Gaming RGB MONTIAN Glowing</h3>
+                <p>Gaming mousepad <br> Produk MONTIAN Glowing LED High Precision Gaming Mouse Pad RGB - LED-01</p>
+                <br />
+                <h4>Price : Rp.100,000</h4>
+                <p><button (click)="detile('mousepad')">show detile</button></p>
+                <p *ngIf="check">{{mpdetile}}</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
