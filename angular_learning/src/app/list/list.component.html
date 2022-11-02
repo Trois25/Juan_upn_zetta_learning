@@ -15,28 +15,32 @@
             <div class="card margin">
                 <h5>MAXPOWER MK853</h5>
                 <p>Price : Rp.650,000,00</p>
-                <p><button (click)="detile('keyboard')" class="btn btn-success" style="margin-right:10px">show detile</button> <button class="btn btn-primary">Add</button></p>
+                <p><button (click)="detile('keyboard')" class="btn btn-success" style="margin-right:10px">show detile</button> <button class="btn btn-primary" (click)="ambil('keyboard')">Add</button></p>
                 <p *ngIf="check">{{kdetile}}</p>
             </div>
             <div class="card margin">
                 <h5>GPRBP27C144</h5>
                 <p>Price : 1,450,000,00</p>
-                <p><button (click)="detile('monitor')" class="btn btn-success" style="margin-right:10px">show detile</button> <button class="btn btn-primary">Add</button></p>
+                <p><button (click)="detile('monitor')" class="btn btn-success" style="margin-right:10px">show detile</button> <button class="btn btn-primary" (click)="ambil('monitor')">Add</button></p>
                 <p *ngIf="check">{{mdetile}}</p>
             </div>
             <div class="card margin">
                 <h5>HIVE UX2</h5>
                 <p>Price : Rp.500,000</p>
-                <p><button (click)="detile('mouse')" class="btn btn-success" style="margin-right:10px">show detile</button> <button class="btn btn-primary">Add</button></p>
+                <p><button (click)="detile('mouse')" class="btn btn-success" style="margin-right:10px">show detile</button> <button class="btn btn-primary" (click)="ambil('mouse')">Add</button></p>
                 <p *ngIf="check">{{msdetile}}</p>
             </div>
             <div class="card margin">
                 <h5> Mousepad MONTIAN</h5>
                 <p>Price : Rp.100,000</p>
-                <p><button (click)="detile('mousepad')" class="btn btn-success" style="margin-right:10px">show detile</button> <button class="btn btn-primary">Add</button></p>
+                <p><button (click)="detile('mousepad')" class="btn btn-success" style="margin-right:10px">show detile</button> <button class="btn btn-primary" (click)="ambil('mousepad')">Add</button></p>
                 <p *ngIf="check">{{mpdetile}}</p>
             </div>
         </div>
+    </div>
+    <div class="check">
+        <h1>Sementara Pemesanan disini</h1>
+        <strong><p *ngIf="purchase">{{productlist}}</p></strong>
     </div>
     
 </body>
