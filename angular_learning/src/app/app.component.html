@@ -1,4 +1,13 @@
 <div class="d-flex flex-row">
-    <app-list></app-list>
-    <app-purchase></app-purchase>
+    <app-list 
+    (addproductlist)="takeproduct($event)"
+    [Listitem]="productlist" 
+    (totalpriceevent)="receivetotal($event)"
+    ></app-list>
+    <!-- addproductlist dari list.ts dan takeproduct($event) untuk dipakai di parent-->
+
+    <app-purchase 
+    [itempurchasedlist]="productpurchasedlist"
+    [itemtotalprice]="totalprice"
+    ></app-purchase>
 </div>

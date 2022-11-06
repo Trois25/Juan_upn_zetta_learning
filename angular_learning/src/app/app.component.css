@@ -1,0 +1,7 @@
+app-list,app-purchase{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 50vw;
+    height: 100vh;
+}

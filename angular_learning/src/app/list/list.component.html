@@ -1,47 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
+<h1 style="text-align: center">{{ Title }}</h1>
+<div class="container">
+  <div *ngFor="let products of Listitem; let i = index">
+    <div class="card margin">
+      <h5>{{ products.name }}</h5>
+      <p>Price : Rp. {{ products.price }}</p>
+      <p>
+        <button
+          (click)="detile(products.producttype, i)"
+          class="btn btn-success"
+          style="margin-right: 10px"
+        >
+          show detile
+        </button>
+        <button class="btn btn-primary" (click)="ambil(i)">Add</button>
+      </p>
 
-    
-    <h1 style="text-align:center">{{Title}}</h1>
-    <div class="container card">
-        <!--First card-->
-        <div class="row">
-            <div class="card margin">
-                <h5>MAXPOWER MK853</h5>
-                <p>Price : Rp.650,000,00</p>
-                <p><button (click)="detile('keyboard')" class="btn btn-success" style="margin-right:10px">show detile</button> <button class="btn btn-primary" (click)="ambil('keyboard')">Add</button></p>
-                <p *ngIf="check">{{kdetile}}</p>
-            </div>
-            <div class="card margin">
-                <h5>GPRBP27C144</h5>
-                <p>Price : 1,450,000,00</p>
-                <p><button (click)="detile('monitor')" class="btn btn-success" style="margin-right:10px">show detile</button> <button class="btn btn-primary" (click)="ambil('monitor')">Add</button></p>
-                <p *ngIf="check">{{mdetile}}</p>
-            </div>
-            <div class="card margin">
-                <h5>HIVE UX2</h5>
-                <p>Price : Rp.500,000</p>
-                <p><button (click)="detile('mouse')" class="btn btn-success" style="margin-right:10px">show detile</button> <button class="btn btn-primary" (click)="ambil('mouse')">Add</button></p>
-                <p *ngIf="check">{{msdetile}}</p>
-            </div>
-            <div class="card margin">
-                <h5> Mousepad MONTIAN</h5>
-                <p>Price : Rp.100,000</p>
-                <p><button (click)="detile('mousepad')" class="btn btn-success" style="margin-right:10px">show detile</button> <button class="btn btn-primary" (click)="ambil('mousepad')">Add</button></p>
-                <p *ngIf="check">{{mpdetile}}</p>
-            </div>
-        </div>
+      <p *ngIf="check[i]">{{ products.info }}</p>
     </div>
-    <div class="check">
-        <h1>Sementara Pemesanan disini</h1>
-        <strong><p *ngIf="purchase">{{productlist}}</p></strong>
-    </div>
-    
-</body>
-</html>
+  </div>
+</div>
