@@ -1,0 +1,29 @@
+<h1 style="text-align: center">{{ Title }}</h1>
+<div class="container">
+  <label>add products</label>
+  <br>
+      <input type="text" #newinputname>
+      <button type="button" (click)="addproduct(newinputname)">add</button>
+      <br><br>
+      <strong><p>New Item Product :</p></strong>
+      <b></b>
+      <p>{{newitem}}</p>
+  <div *ngFor="let products of Listitem; let i = index">
+    <div class="card margin">
+      <h5>{{ products.name }}</h5>
+      <p>Price : Rp. {{ products.price }}</p>
+      <p>
+        <button
+          (click)="detile(products.producttype, i)"
+          class="btn btn-success"
+          style="margin-right: 10px"
+        >
+          show detile
+        </button>
+        <button class="btn btn-primary" (click)="ambil(i)">Add</button>
+      </p>
+
+      <p *ngIf="check[i]">{{ products.info }}</p>
+    </div>
+  </div>
+</div>
