@@ -3,10 +3,10 @@
     <h1>Purchased</h1>
     <h4>Item List :</h4>
     <strong>
+      <button class="btn btn-primary" (click)="notif()">Total price</button>
       <div *ngFor="let purchase of itempurchasedlist">
-        <p>{{ purchase.name }} ------ Rp. {{ purchase.price}} <button class="btn btn-primary" (click)="notif()">notification</button></p>
+        <p>{{ purchase.name }} ------ Rp. {{ purchase.price}}</p>
       </div>
       </strong>
-      <p>Total Price : {{itemtotalprice}}</p>
   </div>
 

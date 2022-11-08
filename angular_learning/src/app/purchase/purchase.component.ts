@@ -1,4 +1,4 @@
-import { Component, OnInit ,Input} from '@angular/core';
+import { Component, OnInit ,Input, Output, EventEmitter} from '@angular/core';
 
 import {dataService} from '../data.service'
 
@@ -15,10 +15,12 @@ export class PurchaseComponent implements OnInit {
   @Input() itempurchasedlist:any;
   @Input() itemtotalprice:number = 0;
   @Input() public Listitem:any;
+  @Output("listdel") listdelete = new EventEmitter<{name:string,price:number}>();
 
   constructor(private purchasedata:dataService) { }
+
   notif(){
-    this.purchasedata.notification(this.itempurchasedlist.name,this.itemtotalprice);
+    this.purchasedata.notiftotal(this.itemtotalprice);
   }
 
   ngOnInit(): void {

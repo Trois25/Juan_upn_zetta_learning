@@ -28,6 +28,7 @@ export class AppComponent {
     ]
 
     productpurchasedlist = [{
+
         
     }]
 
@@ -40,5 +41,6 @@ export class AppComponent {
         this.productpurchasedlist.push({ name:productinfo.productname, price: productinfo.productprice})
         
     }
+
     
 }
