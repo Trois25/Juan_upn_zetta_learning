@@ -1,0 +1,12 @@
+
+  <div class="check">
+    <h1>Purchased</h1>
+    <h4>Item List :</h4>
+    <strong>
+      <div *ngFor="let purchase of itempurchasedlist">
+        <p>{{ purchase.name }} ------ Rp. {{ purchase.price}} <button class="btn btn-primary" (click)="notif()">notification</button></p>
+      </div>
+      </strong>
+      <p>Total Price : {{itemtotalprice}}</p>
+  </div>
+
